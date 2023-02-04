@@ -1,0 +1,8 @@
+Operador, Significado, Ex.
+x + y, soma, 2 + 3 = 5
+x - y, subtração, 2 - 3 = -1
+x * y, multiplicação, 2 * 3 = 6
+x / y, divisão, 2 / 3 = 0.6666667
+x ^ y, exponenciação, 2 ^ 3 = 8
+x %% y, resto divisão, 2 %% 3 = 2
+x %/% y, divisão de inteiros, 2 %/% 3 = 0
