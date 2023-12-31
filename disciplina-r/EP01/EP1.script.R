@@ -1,18 +1,16 @@
 # EP1 - Script Alunos
-# Nome: Maria Raquel de Carvalho Barbosa
-# Num USP: 11250150
 
-# Este script tem uma solução parcial do EP1 
-# Como vários dos comandos estão incompletos, foram colocados como comentários.
-# Vão retirando o símbolo de comentários "#" à medida que for completando os comandos
+# Este script tem uma soluï¿½ï¿½o parcial do EP1 
+# Como vï¿½rios dos comandos estï¿½o incompletos, foram colocados como comentï¿½rios.
+# Vï¿½o retirando o sï¿½mbolo de comentï¿½rios "#" ï¿½ medida que for completando os comandos
 
-# opção para imprimir números reais com 2 casas decimais (para ficar mais fácil de ler na tela)
+# opï¿½ï¿½o para imprimir nï¿½meros reais com 2 casas decimais (para ficar mais fï¿½cil de ler na tela)
 options(digits = 2)
 
 #--------------------------------
 # leitura das planilhas
 #--------------------------------
-## planilha municípios com convid-19
+## planilha municï¿½pios com convid-19
 df_municipios <- read.csv(file = "covid.municipios.SP.csv", 
                           header = TRUE,                     # com header 
                           sep = ",",                         # separador ","
@@ -33,16 +31,16 @@ df_pop <- read.csv(file = "pop.SP.2020.csv",
                    as.is = TRUE)
 
 df_pop <- df_pop[order(as.character(df_pop$Localidades)),]
-print(df_pop)  # são para ver os dados na tela
+print(df_pop)  # sï¿½o para ver os dados na tela
 
 #-------------------------------------------------------------------
-# novo data-frame - info dos municípios e população correspondente
+# novo data-frame - info dos municï¿½pios e populaï¿½ï¿½o correspondente
 #-------------------------------------------------------------------
 
 # para gerar este data-frame:
 # lembre-se de que as planilhas precisam estar ordenadas pela coluna dos nomes dos municÃ­pios
-# conteúdo do data-frame: informaÃ§Ãµes do df_municipios +
-#                         população, grau urb, infectados/100mil, Ã³bitos/100mil
+# conteï¿½do do data-frame: informaÃ§Ãµes do df_municipios +
+#                         populaï¿½ï¿½o, grau urb, infectados/100mil, Ã³bitos/100mil
 # Nomes das colunas:
     # Municipio
     # Grande regiao
@@ -113,10 +111,10 @@ df_infec_sem_obito_urb <- subset(df_municipios_pop, df_municipios_pop$Num.obitos
 
 # fazer grÃ¡ficos  para ver os dados de uma outra forma!!
 barplot(df_rural$Num.Casos, col = "red",
-        main = "Casos de COVID-19 na área rural",
-        xlab = "Cidades", ylab = "Número de casos",
+        main = "Casos de COVID-19 na ï¿½rea rural",
+        xlab = "Cidades", ylab = "Nï¿½mero de casos",
         names.arg = c("Barra do Turvo", "Eldorado", "IbirÃ¡", "Pedra Bela", "Piedade"))
 
 hist(df_rural$Infect.100mil, col = "pink",
-     main = "Pessoas com COVID-19 a cada 100 mil habitantes na área rural",
-     xlab = "Taxa de infectados a cada 100 mil habitantes", ylab = "Frequência")
+     main = "Pessoas com COVID-19 a cada 100 mil habitantes na ï¿½rea rural",
+     xlab = "Taxa de infectados a cada 100 mil habitantes", ylab = "Frequï¿½ncia")
